@@ -1,0 +1,17 @@
+{
+  "main": "build/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node build/index.js",
+    "dev": "nodemon -e ts --exec \"npm run build && npm run start\"",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "discord.js": "14.11.0",
+    "dotenv": "16.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.22",
+    "typescript": "5.1.3"
+  }
+}
