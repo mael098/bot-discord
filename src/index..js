@@ -7,7 +7,7 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds],
 });
 
-client.once(Events.ClientReady, (c) => {
+client.once(Events.clientReady, (c) => {
   console.log(`esta encendido ${c.user.tag}`);
   const miservidor = c.guilds.cache.get('753389169732092015')
   miservidor?.commands.set(commands.map(cmd => cmd.command))
@@ -21,6 +21,8 @@ client.on(Events.InteractionCreate, interaction => {
 	if (!interaction.inCachedGuild()) return
 	commands.get(interaction.commandName)?.execute(interaction)		
 });
+
+
 
 
 

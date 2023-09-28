@@ -1,14 +1,16 @@
 //@ts-check
-import { Collection }  from "discord.js";
+import { Collection }  from "offdjs/djs";
 
 /**
  * @typedef {Object} command
  * @property {import('discord.js').ApplicationCommandDataResolvable} command
  * @property {(interaction: import('discord.js').ChatInputCommandInteraction<'cached'>) => Promise<any>} execute 
- */
+*/
+
 /**
  * @type {import('discord.js').Collection<string, command>}
  */
+
 const cache = new Collection()
 
 import * as ping from '../commands/ping.js'
